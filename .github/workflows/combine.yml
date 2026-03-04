@@ -3,7 +3,7 @@ name: Auto-Combine Trackers
 on:
   schedule:
     - cron: "*/30 * * * *"   # every 30 minutes
-  workflow_dispatch:        # manual run
+  workflow_dispatch:
 
 jobs:
   combine:
@@ -13,7 +13,7 @@ jobs:
       - name: Checkout this repo
         uses: actions/checkout@v4
 
-      - name: Download ngosang trackers_all.txt
+      - name: Download NgoSang trackers_all.txt
         run: |
           curl -L https://raw.githubusercontent.com/ngosang/trackerslist/master/trackers_all.txt -o trackersA.txt
 
@@ -21,14 +21,25 @@ jobs:
         run: |
           curl -L https://raw.githubusercontent.com/XIU2/TrackersListCollection/master/all.txt -o trackersB.txt
 
-      - name: Combine + sort + remove duplicates
+      - name: Combine + remove duplicates (keep original order)
         run: |
-          cat trackersA.txt trackersB.txt | sed '/^\s*$/d' | sort -u > combined_trackers.txt
+          cat trackersA.txt trackersB.txt \
+          | awk '!seen[$0]++ && NF' \
+          > combined_trackers.txt
 
       - name: Commit + push
+        env:
+          GH_PAT: ${{ secrets.GH_PAT }}
         run: |
-          git config user.name "github-actions"
-          git config user.email "actions@github.com"
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+
           git add combined_trackers.txt
-          git diff --quiet && git diff --staged --quiet || git commit -m "Auto-update combined trackers"
-          git push
+
+          # commit only if changes exist
+          if ! git diff --quiet --staged; then
+            git commit -m "Auto-update combined trackers"
+            git push https://x-access-token:${GH_PAT}@github.com/${{ github.repository }} HEAD:${{ github.ref_name }}
+          else
+            echo "No changes to commit."
+          fi
