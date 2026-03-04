@@ -2,7 +2,7 @@ name: Auto-Combine Trackers
 
 on:
   schedule:
-    - cron: "*/30 * * * *"  # every 30 minutes
+    - cron: "0 */6 * * *"
   workflow_dispatch:
 
 jobs:
