@@ -2,7 +2,7 @@ name: Auto-Combine Trackers
 
 on:
   schedule:
-    - cron: "*/30 * * * *"   # every 30 minutes
+    - cron: "*/30 * * * *"  # every 30 minutes
   workflow_dispatch:
 
 jobs:
@@ -14,21 +14,52 @@ jobs:
         uses: actions/checkout@v4
         with:
           fetch-depth: 0
-          persist-credentials: false   # 🔥 REQUIRED FIX
+          persist-credentials: false  # prevents GitHub from overriding your PAT
 
-      - name: Download NgoSang trackers_all.txt
-        run: |
-          curl -L https://raw.githubusercontent.com/ngosang/trackerslist/master/trackers_all.txt -o trackersA.txt
+      # ---------- DOWNLOAD ALL TRACKER SOURCES ----------
 
-      - name: Download XIU2 all.txt
+      - name: Download Tracker Lists (NgoSang + XIU2)
         run: |
-          curl -L https://raw.githubusercontent.com/XIU2/TrackersListCollection/master/all.txt -o trackersB.txt
+          curl -L https://raw.githubusercontent.com/ngosang/trackerslist/master/trackers_all.txt -o A_all.txt
+          curl -L https://raw.githubusercontent.com/ngosang/trackerslist/master/trackers_best.txt -o A_best.txt
+          curl -L https://raw.githubusercontent.com/ngosang/trackerslist/master/trackers_all_udp.txt -o A_udp.txt
+          curl -L https://raw.githubusercontent.com/ngosang/trackerslist/master/trackers_all_http.txt -o A_http.txt
+          curl -L https://raw.githubusercontent.com/ngosang/trackerslist/master/trackers_all_https.txt -o A_https.txt
+          curl -L https://raw.githubusercontent.com/ngosang/trackerslist/master/trackers_all_ws.txt -o A_ws.txt
+          curl -L https://raw.githubusercontent.com/ngosang/trackerslist/master/trackers_all_i2p.txt -o A_i2p.txt
+          curl -L https://raw.githubusercontent.com/ngosang/trackerslist/master/trackers_all_yggdrasil.txt -o A_ygg.txt
+          curl -L https://raw.githubusercontent.com/ngosang/trackerslist/master/trackers_best_ip.txt -o A_best_ip.txt
+          curl -L https://raw.githubusercontent.com/ngosang/trackerslist/master/trackers_all_ip.txt -o A_ip.txt
+          curl -L https://raw.githubusercontent.com/ngosang/trackerslist/master/trackers_all_yggdrasil_ip.txt -o A_ygg_ip.txt
+
+          curl -L https://raw.githubusercontent.com/XIU2/TrackersListCollection/master/all.txt -o B_all.txt
+          curl -L https://raw.githubusercontent.com/XIU2/TrackersListCollection/master/best.txt -o B_best.txt
+          curl -L https://raw.githubusercontent.com/XIU2/TrackersListCollection/master/http.txt -o B_http.txt
+          curl -L https://raw.githubusercontent.com/XIU2/TrackersListCollection/master/nohttp.txt -o B_nohttp.txt
+
+      # ---------- MERGE & REMOVE DUPLICATES ----------
 
       - name: Combine + remove duplicates (keep original order)
         run: |
-          cat trackersA.txt trackersB.txt \
+          cat A_all.txt \
+              A_best.txt \
+              A_udp.txt \
+              A_http.txt \
+              A_https.txt \
+              A_ws.txt \
+              A_i2p.txt \
+              A_ygg.txt \
+              A_best_ip.txt \
+              A_ip.txt \
+              A_ygg_ip.txt \
+              B_all.txt \
+              B_best.txt \
+              B_http.txt \
+              B_nohttp.txt \
           | awk '!seen[$0]++ && NF' \
           > combined_trackers.txt
+
+      # ---------- COMMIT & PUSH ----------
 
       - name: Commit + push
         env:
