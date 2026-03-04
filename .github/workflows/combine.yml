@@ -1,8 +1,8 @@
-name: Auto-Combine TXT Files
+name: Auto-Combine Trackers
 
 on:
   schedule:
-    - cron: "*/5 * * * *"   # every 5 minutes
+    - cron: "*/30 * * * *"   # every 30 minutes
   workflow_dispatch:        # manual run
 
 jobs:
@@ -13,22 +13,22 @@ jobs:
       - name: Checkout this repo
         uses: actions/checkout@v4
 
-      - name: Download file from Repo A
+      - name: Download ngosang trackers_all.txt
         run: |
-          curl -L https://raw.githubusercontent.com/USER_A/REPO_A/BRANCH/PATH/FILE_A.txt -o fileA.txt
+          curl -L https://raw.githubusercontent.com/ngosang/trackerslist/master/trackers_all.txt -o trackersA.txt
 
-      - name: Download file from Repo B
+      - name: Download XIU2 all.txt
         run: |
-          curl -L https://raw.githubusercontent.com/USER_B/REPO_B/BRANCH/PATH/FILE_B.txt -o fileB.txt
+          curl -L https://raw.githubusercontent.com/XIU2/TrackersListCollection/master/all.txt -o trackersB.txt
 
-      - name: Combine files
+      - name: Combine + sort + remove duplicates
         run: |
-          cat fileA.txt fileB.txt > combined.txt
+          cat trackersA.txt trackersB.txt | sed '/^\s*$/d' | sort -u > combined_trackers.txt
 
-      - name: Commit and push changes
+      - name: Commit + push
         run: |
           git config user.name "github-actions"
           git config user.email "actions@github.com"
-          git add combined.txt
-          git diff --quiet && git diff --staged --quiet || git commit -m "Auto-update combined.txt"
+          git add combined_trackers.txt
+          git diff --quiet && git diff --staged --quiet || git commit -m "Auto-update combined trackers"
           git push
