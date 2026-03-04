@@ -1,0 +1,34 @@
+name: Auto-Combine TXT Files
+
+on:
+  schedule:
+    - cron: "*/5 * * * *"   # every 5 minutes
+  workflow_dispatch:        # manual run
+
+jobs:
+  combine:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout this repo
+        uses: actions/checkout@v4
+
+      - name: Download file from Repo A
+        run: |
+          curl -L https://raw.githubusercontent.com/USER_A/REPO_A/BRANCH/PATH/FILE_A.txt -o fileA.txt
+
+      - name: Download file from Repo B
+        run: |
+          curl -L https://raw.githubusercontent.com/USER_B/REPO_B/BRANCH/PATH/FILE_B.txt -o fileB.txt
+
+      - name: Combine files
+        run: |
+          cat fileA.txt fileB.txt > combined.txt
+
+      - name: Commit and push changes
+        run: |
+          git config user.name "github-actions"
+          git config user.email "actions@github.com"
+          git add combined.txt
+          git diff --quiet && git diff --staged --quiet || git commit -m "Auto-update combined.txt"
+          git push
