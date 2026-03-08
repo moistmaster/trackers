@@ -56,7 +56,7 @@ jobs:
               B_best.txt \
               B_http.txt \
               B_nohttp.txt \
-          | awk '!seen[$0]++ && NF' \
+          | awk '!seen[$0]++ && NF {print $0 "\n"}'
           > combined_trackers.txt
 
       # ---------- COMMIT & PUSH ----------
