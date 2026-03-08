@@ -39,26 +39,26 @@ jobs:
 
       # ---------- MERGE & REMOVE DUPLICATES ----------
 
-      - name: Combine + remove duplicates (keep original order)
-        run: |
-          cat A_all.txt \
-              A_best.txt \
-              A_udp.txt \
-              A_http.txt \
-              A_https.txt \
-              A_ws.txt \
-              A_i2p.txt \
-              A_ygg.txt \
-              A_best_ip.txt \
-              A_ip.txt \
-              A_ygg_ip.txt \
-              B_all.txt \
-              B_best.txt \
-              B_http.txt \
-              B_nohttp.txt \
-          | awk '!seen[$0]++ && NF {print $0 "\n"}'
-          > combined_trackers.txt
-
+- name: Combine + remove duplicates (with blank lines)
+  run: |
+    cat A_all.txt \
+        A_best.txt \
+        A_udp.txt \
+        A_http.txt \
+        A_https.txt \
+        A_ws.txt \
+        A_i2p.txt \
+        A_ygg.txt \
+        A_best_ip.txt \
+        A_ip.txt \
+        A_ygg_ip.txt \
+        B_all.txt \
+        B_best.txt \
+        B_http.txt \
+        B_nohttp.txt \
+    | awk '!seen[$0]++ && NF' \
+    | sed 'G' \
+    > combined_trackers.txt
       # ---------- COMMIT & PUSH ----------
 
       - name: Commit + push
