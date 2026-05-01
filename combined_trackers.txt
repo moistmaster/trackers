@@ -346,17 +346,19 @@ udp://[202:68d0:f0d5:b88d:1d1a:555e:2f6b:3148]:6969/announce
 
 http://207.241.226.111:6969/announce
 
-http://asiatorrent.giize.com:51413/announce
+http://207.241.231.226:6969/announce
 
 http://bt1.archive.org:6969/announce
+
+http://bt2.archive.org:6969/announce
 
 http://nyaa.tracker.wf:7777/announce
 
 http://torrentsmd.com:8080/announce
 
-http://tracker.exe.in.th:6969/announce
-
 http://tracker.xn--djrq4gl4hvoi.top:80/announce
+
+http://tracker.zhuqiy.dgj055.icu:80/announce
 
 http://tracker1.itzmx.com:8080/announce
 
@@ -377,8 +379,6 @@ https://torrent.tracker.durukanbal.com:443/announce
 https://torrents.tmtime.dev:443/announce
 
 https://tr.abiir.top:443/announce
-
-https://tr.abir.ga:443/announce
 
 https://tracker.7471.top:443/announce
 
@@ -408,8 +408,6 @@ udp://exodus.desync.com:6969/announce
 
 udp://ibksturm.synology.me:6969/announce
 
-udp://obey.torrentonline.cc:42069/announce
-
 udp://open.ftorrent.com:443/announce
 
 udp://opentor.org:2710/announce
@@ -417,6 +415,8 @@ udp://opentor.org:2710/announce
 udp://p4p.arenabg.com:1337/announce
 
 udp://retracker.hotplug.ru:2710/announce
+
+udp://torrent.bowed.net:8081/announce
 
 udp://tracker.breizh.pm:6969/announce
 
@@ -442,9 +442,13 @@ udp://tracker3.itzmx.com:6961/announce
 
 udp://tracker4.itzmx.com:2710/announce
 
+udp://trackthis.cyber.pz.it:1337/announce
+
 udp://uabits.today:6990/announce
 
 udp://udp1.torrust-tracker-demo.com:6969/announce
+
+udp://utracker.ghostchu-services.top:6969/announce
 
 udp://vito-tracker.duckdns.org:6969/announce
 
