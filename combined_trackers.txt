@@ -350,8 +350,6 @@ http://207.241.231.226:6969/announce
 
 http://bt1.archive.org:6969/announce
 
-http://bt2.archive.org:6969/announce
-
 http://nyaa.tracker.wf:7777/announce
 
 http://torrentsmd.com:8080/announce
@@ -373,8 +371,6 @@ https://004430.xyz:443/announce
 https://1337.abcvg.info:443/announce
 
 https://http1.torrust-tracker-demo.com:443/announce
-
-https://torrent.tracker.durukanbal.com:443/announce
 
 https://torrents.tmtime.dev:443/announce
 
@@ -406,7 +402,7 @@ udp://coeus.torrentonline.cc:42069/announce
 
 udp://exodus.desync.com:6969/announce
 
-udp://ibksturm.synology.me:6969/announce
+udp://obey.torrentonline.cc:42069/announce
 
 udp://open.ftorrent.com:443/announce
 
@@ -415,8 +411,6 @@ udp://opentor.org:2710/announce
 udp://p4p.arenabg.com:1337/announce
 
 udp://retracker.hotplug.ru:2710/announce
-
-udp://torrent.bowed.net:8081/announce
 
 udp://tracker.breizh.pm:6969/announce
 
@@ -442,8 +436,6 @@ udp://tracker3.itzmx.com:6961/announce
 
 udp://tracker4.itzmx.com:2710/announce
 
-udp://trackthis.cyber.pz.it:1337/announce
-
 udp://uabits.today:6990/announce
 
 udp://udp1.torrust-tracker-demo.com:6969/announce
@@ -461,4 +453,6 @@ udp://www.nartlof.com:6969/announce
 udp://yuptracker-eu.gaijinent.com:27022/announce
 
 wss://tracker.openwebtorrent.com:443/announce
+
+https://tr.abir.ga:443/announce
 
