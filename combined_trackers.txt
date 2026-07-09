@@ -402,7 +402,3 @@ udp://whybother.torrentonline.cc:42069/announce
 
 wss://tracker.openwebtorrent.com:443/announce
 
-429: Too Many Requests
-
-For more on scraping GitHub and how it may affect your rights, please review our Terms of Service (https://docs.github.com/en/site-policy/github-terms/github-terms-of-service).udp://52.58.128.163:6969/announce
-
