@@ -284,6 +284,8 @@ http://207.241.231.226:6969/announce
 
 http://announce.sktorrent.eu:6969/announce
 
+http://bt.okmp3.ru:2710/announce
+
 http://bt1.archive.org:6969/announce
 
 http://bt2.archive.org:6969/announce
@@ -295,8 +297,6 @@ http://ns3109441.mypdns.org:6969/announce
 http://nyaa.tracker.wf:7777/announce
 
 http://retracker01-msk-virt.corbina.net:80/announce
-
-http://supertracker.cc.cd:80/announce
 
 http://torrentsmd.com:8080/announce
 
@@ -323,10 +323,6 @@ https://ht.therarbg.to:443/announce
 https://orgtgju.org:443/announce
 
 https://tr.abiir.top:443/announce
-
-https://tr.abir.ga:443/announce
-
-https://tracker.adgk.net:443/announce
 
 https://tracker.foreverpirates.co:443/announce
 
