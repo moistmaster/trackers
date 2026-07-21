@@ -290,13 +290,19 @@ http://bt2.archive.org:6969/announce
 
 http://ipv4announce.sktorrent.eu:6969/announce
 
+http://ns3109441.mypdns.org:6969/announce
+
 http://nyaa.tracker.wf:7777/announce
 
 http://retracker01-msk-virt.corbina.net:80/announce
 
 http://torrentsmd.com:8080/announce
 
+http://tracker.opentorrent.top:6969/announce
+
 http://tracker.plx.im:6969/announce
+
+http://tracker.xn--djrq4gl4hvoi.top:80/announce
 
 http://tracker.zhuqiy.dgj055.icu:80/announce
 
@@ -354,6 +360,8 @@ udp://retracker.hotplug.ru:2710/announce
 
 udp://torrentclub.online:1984/announce
 
+udp://tr.btube3.com:2010/announce
+
 udp://tracker.aruku.ovh:8081/announce
 
 udp://tracker.bluefrog.pw:2710/announce
@@ -363,6 +371,8 @@ udp://tracker.breizh.pm:6969/announce
 udp://tracker.dler.com:6969/announce
 
 udp://tracker.filemail.com:6969/announce
+
+udp://tracker.flatuslifir.is:6969/announce
 
 udp://tracker.ilibr.org:6969/announce
 
@@ -375,6 +385,10 @@ udp://tracker.opentrackr.org:1337/announce
 udp://tracker.skyts.net:6969/announce
 
 udp://tracker.teambelgium.net:6969/announce
+
+udp://tracker.trackarr.org:6969/announce
+
+udp://tracker.tryhackx.org:6969/announce
 
 udp://tracker1.itzmx.com:8080/announce
 
