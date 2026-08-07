@@ -400,9 +400,9 @@ http://bt1.archive.org:6969/announce
 
 http://bt2.archive.org:6969/announce
 
-http://nyaa.tracker.wf:7777/announce
+http://ns3109441.mypdns.org:6969/announce
 
-http://open.trackerlist.xyz:80/announce
+http://nyaa.tracker.wf:7777/announce
 
 http://retracker01-msk-virt.corbina.net:80/announce
 
@@ -417,8 +417,6 @@ http://tracker1.itzmx.com:8080/announce
 http://www.wareztorrent.com:80/announce
 
 https://1337.abcvg.info:443/announce
-
-https://ht.therarbg.to:443/announce
 
 https://tr.abiir.top:443/announce
 
@@ -448,6 +446,8 @@ udp://archive.torrentonline.cc:42069/announce
 
 udp://exodus.desync.com:6969/announce
 
+udp://ipv6.govt.hu:6969/announce
+
 udp://obey.torrentonline.cc:42069/announce
 
 udp://open.tracker.ink:6969/announce
@@ -472,9 +472,9 @@ udp://tracker.filemail.com:6969/announce
 
 udp://tracker.flatuslifir.is:6969/announce
 
-udp://tracker.fnix.net:6969/announce
-
 udp://tracker.gmi.gd:6969/announce
+
+udp://tracker.k.vu:6969/announce
 
 udp://tracker.nyaa.net:6969/announce
 
@@ -496,7 +496,7 @@ udp://v6.vito-tracker.space:6969/announce
 
 udp://whybother.torrentonline.cc:42069/announce
 
-udp://zer0day.ch:1337/announce
-
 wss://tracker.openwebtorrent.com:443/announce
+
+https://ht.therarbg.to:443/announce
 
