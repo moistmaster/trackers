@@ -302,6 +302,8 @@ http://207.241.231.226:6969/announce
 
 http://announce.sktorrent.eu:6969/announce
 
+http://asiatorrent.giize.com:51413/announce
+
 http://bt1.archive.org:6969/announce
 
 http://bt2.archive.org:6969/announce
@@ -382,8 +384,6 @@ udp://tracker.dler.com:6969/announce
 
 udp://tracker.filemail.com:6969/announce
 
-udp://tracker.flatuslifir.is:6969/announce
-
 udp://tracker.govt.hu:6969/announce
 
 udp://tracker.k.vu:6969/announce
@@ -407,8 +407,6 @@ udp://tracker3.itzmx.com:6961/announce
 udp://tracker4.itzmx.com:2710/announce
 
 udp://v6.vito-tracker.space:6969/announce
-
-udp://whybother.torrentonline.cc:42069/announce
 
 wss://tracker.openwebtorrent.com:443/announce
 
