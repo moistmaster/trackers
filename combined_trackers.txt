@@ -306,8 +306,6 @@ http://207.241.231.226:6969/announce
 
 http://announce.sktorrent.eu:6969/announce
 
-http://asiatorrent.giize.com:51413/announce
-
 http://bt1.archive.org:6969/announce
 
 http://bt2.archive.org:6969/announce
@@ -317,8 +315,6 @@ http://nyaa.tracker.wf:7777/announce
 http://retracker01-msk-virt.corbina.net:80/announce
 
 http://torrentsmd.com:8080/announce
-
-http://tracker.bittor.pw:1337/announce
 
 http://tracker.internetwarriors.net:1337/announce
 
@@ -335,8 +331,6 @@ https://1337.abcvg.info:443/announce
 https://tr.abiir.top:443/announce
 
 https://tr.burnabyhighstar.com:443/announce
-
-https://tracker.adgk.net:443/announce
 
 https://tracker.kuroy.me:443/announce
 
@@ -368,9 +362,9 @@ udp://p4p.arenabg.com:1337/announce
 
 udp://retracker.hotplug.ru:2710/announce
 
-udp://torrent.tracker.durukanbal.com:6969/announce
+udp://t.overflow.biz:6969/announce
 
-udp://tr3.ysagin.top:2715/announce
+udp://torrent.tracker.durukanbal.com:6969/announce
 
 udp://tracker.breizh.pm:6969/announce
 
@@ -399,8 +393,4 @@ udp://tracker4.itzmx.com:2710/announce
 udp://v2.iperson.xyz:6969/announce
 
 wss://tracker.openwebtorrent.com:443/announce
-
-https://tr.abir.ga:443/announce
-
-udp://t.overflow.biz:6969/announce
 
