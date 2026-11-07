@@ -340,7 +340,7 @@ http://tracker.xn--djrq4gl4hvoi.top:80/announce
 
 http://tracker1.itzmx.com:8080/announce
 
-http://tracker2.itzmx.com:6961/announce
+http://tracker4.itzmx.com:2710/announce
 
 http://www.wareztorrent.com:80/announce
 
@@ -349,8 +349,6 @@ https://1.tracker.eu.org:443/announce
 https://1337.abcvg.info:443/announce
 
 https://tr.abiir.top:443/announce
-
-https://tr.abir.ga:443/announce
 
 https://tr.burnabyhighstar.com:443/announce
 
@@ -376,7 +374,7 @@ udp://[2a04:ac00:1:3dd8::1:2710]:2710/announce
 
 udp://bt-tracker.de:6969/announce
 
-udp://ipv6.govt.hu:6969/announce
+udp://discover.curiousfacts.blog:6969/announce
 
 udp://open.tracker.ink:6969/announce
 
@@ -391,6 +389,8 @@ udp://p4p.arenabg.com:1337/announce
 udp://retracker.hotplug.ru:2710/announce
 
 udp://torrent.tracker.durukanbal.com:6969/announce
+
+udp://tr3.ysagin.top:2715/announce
 
 udp://tracker.breizh.pm:6969/announce
 
