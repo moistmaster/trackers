@@ -354,8 +354,6 @@ http://tracker1.itzmx.com:8080/announce
 
 http://tracker4.itzmx.com:2710/announce
 
-http://www.all4nothin.net:80/announce.php
-
 http://www.wareztorrent.com:80/announce
 
 https://1.tracker.eu.org:443/announce
@@ -363,6 +361,8 @@ https://1.tracker.eu.org:443/announce
 https://1337.abcvg.info:443/announce
 
 https://tr.abiir.top:443/announce
+
+https://tr.burnabyhighstar.com:443/announce
 
 https://tracker.augrains.com:443/announce
 
@@ -388,11 +388,11 @@ udp://announce.augrains.com:6969/announce
 
 udp://discover.curiousfacts.blog:6969/announce
 
+udp://ipv6.govt.hu:6969/announce
+
 udp://open.tracker.ink:6969/announce
 
 udp://opentor.org:2710/announce
-
-udp://opentracker.lain.moscow:6969/announce
 
 udp://opentracker2.lain.moscow:6969/announce
 
@@ -404,11 +404,11 @@ udp://stairs.lat:6969/announce
 
 udp://torrent.tracker.durukanbal.com:6969/announce
 
-udp://tr3.ysagin.top:2715/announce
-
 udp://tracker.alt.cx:6969/announce
 
 udp://tracker.dler.com:6969/announce
+
+udp://tracker.flatuslifir.is:6969/announce
 
 udp://tracker.skyts.net:6969/announce
 
@@ -427,6 +427,4 @@ udp://tracker4.itzmx.com:2710/announce
 udp://v2.iperson.xyz:6969/announce
 
 wss://tracker.openwebtorrent.com:443/announce
-
-udp://tracker.sela.st:6969/announce
 
